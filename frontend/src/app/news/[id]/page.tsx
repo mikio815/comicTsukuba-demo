@@ -10,7 +10,7 @@ type NewsDetailProps = {
 };
 
 export default async function NewsDetailPage({ params }: NewsDetailProps) {
-  const { id } = await params;
+  const { id } = params;
   const newslist = await getNews();
   const news = newslist.find((news: News) => news.id.toString() === id);
 
