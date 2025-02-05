@@ -1,6 +1,7 @@
 import Layout from "../../(common)/layout";
 import { getNews } from "@/lib/api";
 import ReactMarkdown from "react-markdown";
+import { News } from "@/types/news";
 
 type NewsDetailProps = {
   params: {
@@ -11,7 +12,7 @@ type NewsDetailProps = {
 export default async function NewsDetailPage({ params }: NewsDetailProps) {
   const { id } = await params;
   const newslist = await getNews();
-  const news = newslist.find((news: any) => news.id.toString() === id);
+  const news = newslist.find((news: News) => news.id.toString() === id);
 
   if (!news) {
     return <p>ニュースが見つかりませんでした。</p>;

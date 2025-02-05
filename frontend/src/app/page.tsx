@@ -1,5 +1,4 @@
 import Layout from "@/app/(common)/layout";
-import Button from "@/app/(common)/button";
 
 export default function HomePage() {
     return (
