@@ -4,16 +4,16 @@ import ReactMarkdown from "react-markdown";
 import { News } from "@/types/news";
 
 type NewsDetailProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
   searchParams?: {
     [key: string]: string | string[] | undefined;
   };
 };
 
 export default async function NewsDetailPage({ params }: NewsDetailProps) {
-  const { id } = params;
+  const { id } = await params;
   const newslist = await getNews();
   const news = newslist.find((news: News) => news.id.toString() === id);
 
