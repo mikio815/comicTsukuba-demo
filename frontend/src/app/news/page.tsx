@@ -2,6 +2,7 @@
 import Layout from "../(common)/layout";
 import { getNews } from "@/lib/api";
 import Link from "next/link";
+import { News } from "@/types/news";
 
 export default async function NewsPage() {
   const newslist = await getNews();
@@ -14,7 +15,7 @@ export default async function NewsPage() {
           {newslist.length === 0 ? (
             <p>新着情報はまだありません！</p>
           ) : (
-            newslist.map((news:any) => (
+            newslist.map((news:News) => (
               <div key={news.id} className="bg-white p-4 rounded-lg shadow-md">
                 <h2 className="text-xl font-semibold">{news.title}</h2>
                 <p>{news.published}</p> {/* 日付を表示 */}
