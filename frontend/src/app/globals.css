@@ -26,3 +26,11 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'NotoSansJP';
+  src: url('/fonts/NotoSansJP-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

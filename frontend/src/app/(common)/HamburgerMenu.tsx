@@ -32,7 +32,7 @@ export default function HamburgerMenu() {
       >
         <ul className="flex flex-col space-y-8 text-white">
           <li>
-            <Link href="/news">- News</Link>
+            <Link href="/">- HOME</Link>
           </li>
           <li>
             <Link href="/about">- コミックつくばとは？</Link>

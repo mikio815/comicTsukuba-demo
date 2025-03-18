@@ -1,31 +1,33 @@
 // src/app/news/page.tsx
 import Layout from "../(common)/layout";
-import { getNews } from "@/lib/api";
 import Link from "next/link";
-import { News } from "@/types/news";
 
 export default async function NewsPage() {
-  const newslist = await getNews();
-
   return (
     <Layout>
-      <div className="container mx-auto py-8 text-center">
-        <h1 className="text-3xl font-bold">News</h1>
-        <div className="mt-6 space-y-6">
-          {newslist.length === 0 ? (
-            <p>新着情報はまだありません！</p>
-          ) : (
-            newslist.map((news:News) => (
-              <div key={news.id} className="bg-white p-4 rounded-lg shadow-md">
-                <h2 className="text-xl font-semibold">{news.title}</h2>
-                <p>{news.published}</p> {/* 日付を表示 */}
-                <Link href={`/news/${news.id}`} passHref>
-                    <span className="text-blue-500">詳細を見る</span>                </Link>
-              </div>
-            ))
-          )}
-        </div>
-      </div>
+      <div className="mt-12 mb-28 font-bold max-w-[720px] mx-auto"> {/* News */}
+        <h2 className="text-center text-3xl mb-12">NEWS</h2>
+          <div className="mt-4 space-y-4">
+            <div className="grid grid-cols-3 items-center border-black border-b-2 py-2 transition-transform duration-200 ease-out hover:scale-105">
+              <span className="text-lg text-left pl-6">2025.03.01</span>
+              <span className="text-xl text-center">
+                <Link href="/news/3" className="hover:underline">出展者募集開始について</Link>
+              </span>
+            </div>
+            <div className="grid grid-cols-3 items-center border-black border-b-2 py-2 transition-transform duration-200 ease-out hover:scale-105">
+              <span className="text-lg text-left pl-6">2025.02.15</span>
+              <span className="text-xl text-center">
+                <Link href="/news/2" className="hover:underline">スタッフ募集のお知らせ</Link>
+              </span>
+            </div>
+            <div className="grid grid-cols-3 items-center border-black border-b-2 py-2 transition-transform duration-200 ease-out hover:scale-105">
+              <span className="text-lg text-left pl-6">2025.02.01</span>
+              <span className="text-xl text-center">
+                <Link href="/news/1" className="hover:underline">webサイト開設のお知らせ</Link>
+              </span>
+            </div>
+          </div>
+      </div> 
     </Layout>
   );
 }

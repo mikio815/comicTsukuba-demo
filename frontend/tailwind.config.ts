@@ -14,6 +14,7 @@ const config: Config = {
       },
       fontFamily: {
         custom: ['DelaSukoGothic', 'sans-serif'],
+        nav: ['Noto Sans JP', 'sans-serif'],
       },
       boxShadow: {
         'text-outline': '0 0 5px rgba(0, 0, 0, 0.7)'
