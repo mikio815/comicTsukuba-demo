@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 import type { Redirect } from "next/dist/lib/load-custom-routes";
 
-const redirects = async (): Promise<Redirect[]> => {
+/* const redirects = async (): Promise<Redirect[]> => {
   return [
     {
       source: "/:path*",
@@ -15,10 +15,10 @@ const redirects = async (): Promise<Redirect[]> => {
       permanent: true,
     },
   ];
-};
+}; */
 
 const nextConfig: NextConfig = {
-  redirects,
+  /* redirects, */
 };
 
 export default nextConfig;
