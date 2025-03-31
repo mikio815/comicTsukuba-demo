@@ -11,7 +11,7 @@ export default function HomePage() {
                 <div className="flex flex-col md:flex-row items-center gap-x-12 mt-8"> {/* メインのとこ */}
                     <div className="flex flex-col md:flex-row items-center"> {/* 左側 */}
                         <Image
-                            src={"/pictures/unnamed.jpg"}
+                            src={"/pictures/4.png"}
                             alt="ポスター画像"
                             width={627}
                             height={886}
@@ -29,8 +29,7 @@ export default function HomePage() {
                         <div className="text-center md:text-left flex flex-col items-center md:items-start md:ml-8 space-y-1">
                             <div className="space-y-2">
                                 <div className="mt-4 text-lg font-bold">DATE</div>
-                                <div className="text-4xl font-bold">2025 . 11 . 2, 3</div>
-                                <div className="text-4xl font-bold">（雙峰祭）</div>
+                                <div className="text-4xl font-bold">11月上旬開催予定</div>
                             </div>
                             <div className="space-y-2">
                                 <div className="mt-4 text-lg font-bold">PLACE</div>
